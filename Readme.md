@@ -93,3 +93,43 @@ Hasil : Berhasil. Menampilkan list file pada hdfs. Output 0 atau string "" karna
 ![](screenshots/scala_2.png)
 
 Hasil : Berhasil. Menampilkan list file pada folder /tmp (temporary file)
+
+# Tugas Praktikum 2
+
+1. Kode 1
+    * sc : instansiasi dari spark context
+    * accumulator : bertujuan akumulasi shared variable
+    * parallelize : method pada spark context yang digunakan untuk membuat RDD (Collection).
+    * lambda : melakukan transformasi data pada RDD
+    * value : kumpulan data yang dapat dibagi menjadi beberapa bagian (partisi) dan didistribusikan ke beberapa node dalam sebuah cluster.
+
+2. Kode 2
+    * broadcast : mengoptimalkan pengiriman data ke worker node dalam sebuah cluster sesuai range.
+    * list : menyimpan dan memproses kumpulan data yang terdistribusi di beberapa node (dalam bentuk array)
+    * range : menghitung collection pada rentang bilangan tertentu.
+
+3. Kode 3
+    * textFile : membaca file teks pada Spark dan mengubahnya menjadi RDD
+    * filter : memfilter elemen-elemen RDD berdasarkan kondisi yang diberikan.
+    * cache : menyimpan RDD dalam memori pada node-node dalam sebuah cluster.
+    * count : menghitung jumlah elemen dalam RDD.
+
+4. Kode 4
+    * map : melakukan looping pada collection / RDD
+    * collect : berisi elemen dengan tipe data dinamis dalam bentuk list
+    * len : menghitung nilai dari suatu variabel
+    * keys : kunci / keys dalam sebuah collection / RDD seperti konsep array
+    * values : nilai dalam sebuah collection / RDD seperti konsep array
+
+5. Kode 5
+    * defaultParallelism : menentukan jumlah partisi default yang akan dibuat ketika membuat RDD
+    * getNumPartitions : untuk mendapatkan jumlah partisi dari RDD
+    * mapPartitionsWithIndex : untuk melakukan pemrosesan looping pada setiap partisi dari RDD
+    * repartition: memindahkan data dari satu partisi ke partisi lainnya secara acak
+    * coalesce: untuk mengurangi jumlah partisi dari RDD 
+    * toDebugString : untuk menampilkan informasi detail tentang RDD
+
+6. Kode 6
+    * flatMap : memproses looping setiap elemen pada RDD dan menghasilkan output dalam bentuk koleksi yang dapat berbeda-beda, termasuk dalam bentuk array, list, atau tuple.
+    * reduceByKey : untuk menghitung jumlah pada kunci / keys tertentu pada RDD.
+    * split : memecah sebuah string menjadi beberapa bagian berdasarkan sebuah pemisah (delimiter) tertentu.
